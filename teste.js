@@ -12,7 +12,7 @@ const sequelize = new Sequelize; ('mysql', 'root', 'Pcezar11@*', {
 
 const Postagem = sequelize.define('postagens', {
     titulo: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
     },
     conteudo: {
         type: Sequelize.TEXT
@@ -20,5 +20,23 @@ const Postagem = sequelize.define('postagens', {
     }
 })
 
-Postagem.sync({force:true})
+//Postagem.sync({force: true})
 
+
+
+
+
+
+const Usuario = sequelize.define('usuarios', {
+    titulo: {
+        type: Sequelize.STRING
+    },
+    idade: {
+        type: Sequelize.INTEGER
+},
+    email: {
+        type: Sequelize.STRING,
+    }
+})
+
+Usuario.sync({force: true})
